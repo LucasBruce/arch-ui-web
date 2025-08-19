@@ -1,0 +1,9 @@
+# files
+package-lock.json
+*.gitkeep
+*.svg
+*.ico
+
+# dir
+dist
+node_modules

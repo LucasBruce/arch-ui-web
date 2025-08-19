@@ -22,7 +22,14 @@
     "typeCheckHostBindings": true,
     "strictTemplates": true
   },
+  "include": ["src/**/*.ts", "src/**/*.tsx"],
   "files": [],
+  "noImplicitAny": true,
+  "resolveJsonModule": true,
+  "esModuleInterop": true,
+  "paths": {
+    "@angular/*": ["./node_modules/@angular/*"]
+  },
   "references": [
     {
       "path": "./tsconfig.app.json"

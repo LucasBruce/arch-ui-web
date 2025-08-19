@@ -3,7 +3,7 @@ import type { Routes } from '@angular/router';
 
 export const pageRoutes = (): Routes => [
   {
-    path: 'avi',
+    path: ROUTE_TREE.PAGES.PAGE,
     loadComponent: () => import('./page').then((m) => m.Page),
   },
 ];
