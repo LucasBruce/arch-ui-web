@@ -1,7 +1,7 @@
 import { AfterViewInit, Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 
 @Component({
-  selector: 'app-matrix-rain',
+  selector: 'arch-app-matrix-rain',
   imports: [],
   template: `<canvas #matrixCanvas></canvas>`,
   styles: [
@@ -31,7 +31,7 @@ export class MatrixRain implements AfterViewInit {
     this.resizeCanvas();
 
     // inicializa as "gotas"
-    this.drops = Array(this.columns).fill(1);
+    this.drops = Array(this.columns).fill(1) as number[];
 
     this.animate();
   }

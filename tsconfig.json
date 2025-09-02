@@ -27,9 +27,6 @@
   "noImplicitAny": true,
   "resolveJsonModule": true,
   "esModuleInterop": true,
-  "paths": {
-    "@angular/*": ["./node_modules/@angular/*"]
-  },
   "references": [
     {
       "path": "./tsconfig.app.json"

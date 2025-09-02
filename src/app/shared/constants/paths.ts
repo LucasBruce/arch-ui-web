@@ -1,4 +1,4 @@
-export const ROUTE_TREE = {
+export const PATHS = {
   PAGES: {
     PAGE: 'page',
     MATRIX_RAIN: 'matrix-rain',

@@ -1,16 +1,16 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-page',
+  selector: 'arch-app-page',
   imports: [],
-  templateUrl: './page.html',
-  styleUrl: './page.scss',
+  template: `
+    <p>page works!</p>
+    <h1>{{ this.init() }}</h1>
+  `,
 })
 export class Page {
   init() {
-    let vari: any;
-
-    vari = 'Hello, world!';
+    const vari = 'Hello, world!';
 
     return vari;
   }
