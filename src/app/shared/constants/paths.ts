@@ -1,7 +1,8 @@
 export const PATHS = {
   PAGES: {
-    PAGE: 'page',
+    HELLOW: 'hellow',
     MATRIX_RAIN: 'matrix-rain',
+    USER: 'user',
   },
   COMPONENTS: {
     HEADER: 'header',

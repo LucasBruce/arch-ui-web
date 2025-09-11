@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'arch-app-page',
+  selector: 'arch-app-hellow',
   imports: [],
   template: `
-    <p>page works!</p>
+    <p>Hellow works!</p>
     <h1>{{ this.init() }}</h1>
   `,
 })
-export class Page {
+export class HellowPage {
   init() {
     const vari = 'Hello, world!';
 

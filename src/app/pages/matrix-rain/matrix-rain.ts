@@ -15,7 +15,7 @@ import { AfterViewInit, Component, ElementRef, HostListener, ViewChild } from '@
     `,
   ],
 })
-export class MatrixRain implements AfterViewInit {
+export class MatrixRainPage implements AfterViewInit {
   @ViewChild('matrixCanvas', { static: true }) canvasRef!: ElementRef<HTMLCanvasElement>;
   private ctx!: CanvasRenderingContext2D;
   private letters =
