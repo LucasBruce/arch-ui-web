@@ -1,8 +1,8 @@
-import { Component, inject, Injectable, OnInit } from '@angular/core';
-import { catchError, finalize, firstValueFrom, Observable, of, retry } from 'rxjs';
 import { AsyncPipe, JsonPipe, NgFor, NgIf } from '@angular/common';
-import { URLS } from '../../shared/constants/urls';
 import { HttpClient } from '@angular/common/http';
+import { Component, inject, Injectable, OnInit } from '@angular/core';
+import { catchError, finalize, firstValueFrom, Observable, of } from 'rxjs';
+import { URLS } from '../../shared/constants/urls';
 
 type IUsers = {
   id: string;
@@ -114,6 +114,6 @@ export class UserPage implements OnInit {
     //     console.error(this.errorMessage, error);
     //   });
 
-    this.users$ ? (this.isDisplay = true) : (this.isDisplay = false);
+    // this.users$ ? (this.isDisplay = true) : (this.isDisplay = false);
   }
 }
