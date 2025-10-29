@@ -99,21 +99,21 @@ export class UserPage implements OnInit {
   isDisplay = false;
   users!: IUsers[];
 
-  private userService = inject(UserService);
+  // private userService = inject(UserService);
 
   private userService1 = inject(UserService1);
 
   ngOnInit(): void {
-    this.users$ = this.userService.getUsers();
+    // this.users$ = this.userService.getUsers();
 
-    // this.userService1
-    //   .getUsers()
-    //   .then((data) => (this.users = data))
-    //   .catch((error) => {
-    //     this.errorMessage = 'Erro ao carregar usuários via Promise.';
-    //     console.error(this.errorMessage, error);
-    //   });
-
-    // this.users$ ? (this.isDisplay = true) : (this.isDisplay = false);
+    this.userService1
+      .getUsers()
+      .then((data) => {
+        this.users = data;
+      })
+      .catch((error) => {
+        this.errorMessage = 'Erro ao carregar usuários via Promise.';
+        console.error(this.errorMessage, error);
+      });
   }
 }
