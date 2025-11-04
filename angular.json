@@ -42,14 +42,25 @@
                   "maximumWarning": "4kB",
                   "maximumError": "8kB"
                 }
-              ],
-              "outputHashing": "all",
-              "serviceWorker": "ngsw-config.json"
+              ]
             },
             "development": {
               "optimization": false,
               "extractLicenses": false,
               "sourceMap": true
+            },
+            "pwa": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environment.ts",
+                  "with": "src/environment.pwa.ts"
+                }
+              ],
+              "outputHashing": "all",
+              "serviceWorker": "ngsw-config.json",
+              "optimization": true,
+              "sourceMap": false,
+              "aot": true
             }
           },
           "defaultConfiguration": "production"
@@ -62,6 +73,9 @@
             },
             "development": {
               "buildTarget": "arch-ui-web:build:development"
+            },
+            "pwa": {
+              "buildTarget": "arch-ui-web:build:pwa"
             }
           },
           "defaultConfiguration": "development"
