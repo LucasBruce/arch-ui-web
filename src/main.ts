@@ -5,7 +5,7 @@ import { environment } from './environment.pwa';
 
 bootstrapApplication(App, appConfig)
   .then(() => {
-    if ('serviceWorker' in navigator && environment.enablePwa) {
+    if ('serviceWorker' in navigator && environment.production) {
       window.addEventListener('load', () => {
         navigator.serviceWorker
           .register('/ngsw-worker.js')
