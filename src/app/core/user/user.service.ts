@@ -1,7 +1,7 @@
 import { inject, Injectable } from '@angular/core';
 import { URLS } from '../../shared/constants/urls';
-import { ApiInterface } from '../api/api.interface';
-import { ApiToken } from '../api/api.token';
+import { ApiInterface } from '../../middleware/api/api.interface';
+import { ApiToken } from '../../middleware/api/api.token';
 import { UserInterface } from './user.interface';
 
 export type IUsers = {
@@ -25,6 +25,7 @@ export type IDuty = {
 
 @Injectable()
 export class UserService implements UserInterface {
+  private users!: IUsers[];
   private apiService: ApiInterface = inject(ApiToken);
 
   getUsers(next: (users: IUsers[]) => void, errorFn: (msg: string) => void): void {
@@ -37,5 +38,13 @@ export class UserService implements UserInterface {
         console.error('Deu Ruim => ', error);
         errorFn('Erro ao carregar usuários via Promise.');
       });
+  }
+
+  setUser(users: IUsers[]) {
+    this.users = users;
+  }
+
+  getUser() {
+    return this.users;
   }
 }

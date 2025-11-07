@@ -1,11 +1,11 @@
-import { Routes } from '@angular/router';
 import { PATHS } from '../../shared/constants/paths';
-import { UserFeatureComponent } from './user.feature';
+import { UserPage } from './pages/user/user';
+import { Routes } from '@angular/router';
 
 export const userRoutes = (): Routes => [
   {
     path: PATHS.PAGES.USER,
-    component: UserFeatureComponent,
+    loadComponent: () => import('./user.feature').then((p) => p.UserFeatureComponent),
     children: [
       {
         path: PATHS.PAGES.USER,
@@ -14,7 +14,11 @@ export const userRoutes = (): Routes => [
       },
       {
         path: '',
-        loadComponent: () => import('./pages/user').then((m) => m.UserPage),
+        component: UserPage,
+      },
+      {
+        path: 'user-app',
+        loadComponent: () => import('./pages/user-app/user-app').then((p) => p.UserApp),
       },
     ],
   },

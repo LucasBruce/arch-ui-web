@@ -7,12 +7,17 @@
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
-          "style": "scss"
+          "changeDetection": "OnPush",
+          "inlineTemplate": true,
+          "inlineStyle": true,
+          "standalone": true,
+          "style": "scss",
+          "flat": false
         }
       },
       "root": "",
       "sourceRoot": "src",
-      "prefix": "app",
+      "prefix": "arch",
       "architect": {
         "build": {
           "builder": "@angular/build:application",
