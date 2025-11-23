@@ -1,6 +1,6 @@
 export const PATHS = {
   PAGES: {
-    HELLOW: 'hellow',
+    HELLO: 'hello',
     MATRIX_RAIN: 'matrix-rain',
     USER: 'user',
   },
@@ -8,4 +8,4 @@ export const PATHS = {
     HEADER: 'header',
     FOOTER: 'footer',
   },
-};
+} as const;

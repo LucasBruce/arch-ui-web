@@ -4,7 +4,7 @@ import { userRoutes } from './pages/user/user.routes';
 
 export const routes: Routes = [
   {
-    path: PATHS.PAGES.HELLOW,
+    path: PATHS.PAGES.HELLO,
     loadComponent: () => import('./pages/hellow/hellow').then((m) => m.HellowPage),
   },
   {

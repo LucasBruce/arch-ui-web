@@ -1,24 +1,19 @@
+import { UserFeatureComponent } from './user.feature';
 import { PATHS } from '../../shared/constants/paths';
-import { UserPage } from './pages/user/user';
 import { Routes } from '@angular/router';
 
 export const userRoutes = (): Routes => [
   {
     path: PATHS.PAGES.USER,
-    loadComponent: () => import('./user.feature').then((p) => p.UserFeatureComponent),
+    component: UserFeatureComponent,
     children: [
       {
-        path: PATHS.PAGES.USER,
-        redirectTo: '',
-        pathMatch: 'full',
-      },
-      {
         path: '',
-        component: UserPage,
+        loadComponent: () => import('./pages/user/user').then((p) => p.UserPage),
       },
       {
         path: 'user-app',
-        loadComponent: () => import('./pages/user-app/user-app').then((p) => p.UserApp),
+        loadComponent: () => import('./pages/user-app/user-app').then((p) => p.UserAppPage),
       },
     ],
   },

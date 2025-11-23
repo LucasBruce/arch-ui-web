@@ -3,7 +3,6 @@ import { IRepository } from '../../../../middleware/repository/repository.interf
 import { RepositoryToken } from '../../../../middleware/repository/repository.token';
 import { UserToken } from '../../../../core/user/user.token';
 import { UserInterface } from '../../../../core/user/user.interface';
-import { IUsers } from '../../../../core/user/user.service';
 
 @Component({
   selector: 'arch-user-app',
@@ -16,7 +15,7 @@ import { IUsers } from '../../../../core/user/user.service';
   styles: ``,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class UserApp implements OnInit {
+export class UserAppPage implements OnInit {
   private userService: UserInterface = inject(UserToken);
   private repository: IRepository = inject(RepositoryToken);
 
